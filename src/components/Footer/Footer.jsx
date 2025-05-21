@@ -1,68 +1,67 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import fbIcon from '../../assets/socialnetworkicons/facebook.svg';
-import inIcon from '../../assets/socialnetworkicons/instagram.svg';
+import fbIcon from '../../assets/facebook.svg';
+import inIcon from '../../assets/instagram.svg';
 import './style.footer.css'
 
 const Footer = () => {
   const navigate = useNavigate();
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:kudcajavec@gmail.com';
+    window.location.href = 'mailto:#';
   };
 
   return (
     <div className="footer_main">
       <div className="footer_sub">
         <div className="footer_content footer_left">
-          <h3>Контакт</h3>
+          <h3>Kontakt</h3>
           <ul className="footerlist">
             <li>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=44.764885141813%2C17.189412564039"
+                href="https://www.google.com/maps/place/Tropic+centar+Banja+Luka/data=!4m2!3m1!1s0x0:0xea838ed623101ba8?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Цара Лазара бр. 1
+                Ivana Gorana Kovacica bb
               </a>
             </li>
             <li>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=44.764885141813%2C17.189412564039"
+                href="https://www.google.com/maps/place/Tropic+centar+Banja+Luka/data=!4m2!3m1!1s0x0:0xea838ed623101ba8?sa=X&ved=1t:2428&ictx=111"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                78000 Бања Лука
+                78000 Banja Luka
               </a>
             </li>
             <li>
-              <a href="tel:+38766938114">066 938 114</a>
+              <a href="tel:+38766123456">066 123 456</a>
             </li>
             <li>
               <button onClick={handleEmailClick} className="email-link">
-                kudcajavec@gmail.com
+                info@tropic.ba
               </button>
             </li>
           </ul>
         </div>
 
         <div className="footer_content footer_center">
-          <h3>Корисни линкови</h3>
+          <h3>Korisni linkovi</h3>
           <ul className="footerlist">
-            <li><a onClick={() => navigate('/')}>Почетна</a></li>
-            <li><a onClick={() => navigate('/works')}>Секције</a></li>
-            <li><a onClick={() => navigate('/gallery')}>Галерија</a></li>
-            <li><a onClick={() => navigate('/contact')}>Контакт</a></li>
+            <li><a onClick={() => navigate('/')}>Home</a></li>
+            <li><a onClick={() => navigate('/counter')}>Counter</a></li>
+            <li><a onClick={() => navigate('/learning')}>Learning</a></li>
           </ul>
         </div>
 
         <div className="footer_content footer_right">
-          <h3>Друштвене мреже</h3>
+          <h3>Drustvene mreze</h3>
           <ul className="footerlist">
             <li className="social_network">
               <img className="list_img" src={fbIcon} alt="Facebook" />
               <a
-                href="https://www.facebook.com/p/KUD-%C4%8Cajavec-Banja-Luka-100057518017051/"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -72,7 +71,7 @@ const Footer = () => {
             <li className="social_network">
               <img className="list_img" src={inIcon} alt="Instagram" />
               <a
-                href="https://www.instagram.com/kud_cajavec/"
+                href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
