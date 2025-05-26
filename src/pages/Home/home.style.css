@@ -141,6 +141,51 @@
 }
 
 
+/*sectiojn four*/
+
+.feedback_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    flex: 1;
+    justify-content: center;
+    margin: 0px auto;
+    background-color: #b6f1aa;
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+.feedback_page {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;   
+    padding: 20px;
+}
+.heading {
+    background-image: url('../../assets/sectionfourbcg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.feedback_part {
+    padding: 10px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.sectionfour_image {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100px;
+}
+
 @media screen and (max-width: 900px) {
     .home_wrapper {
         width: 90%;
