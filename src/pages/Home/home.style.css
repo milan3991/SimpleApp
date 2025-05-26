@@ -85,6 +85,62 @@
     background-repeat: no-repeatn;
 }
 
+/*section three*/
+.works_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    flex: 1;
+    justify-content: center;
+    margin: 0px auto;
+}
+.heading {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+
+.heading  h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.heading p {
+    max-width: 500px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.works_page {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.work_part {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 400px;
+}
+
+.work_part h2 {
+    max-width: 200px;
+}
+
+.sectionthree_image {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+
 @media screen and (max-width: 900px) {
     .home_wrapper {
         width: 90%;
