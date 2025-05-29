@@ -3,6 +3,7 @@ import SectionOne from './componenets/SectionOne';
 import SectionTwo from './componenets/SectionTwo';
 import SectionThree from './componenets/SectionThree';
 import SectionFour from './componenets/SectionFour';
+import SectionFive from './componenets/SectionFive';
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <SectionTwo/>
             <SectionThree />
             <SectionFour/>
+            <SectionFive/>
         </div>
     );
 };
