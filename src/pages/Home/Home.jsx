@@ -4,6 +4,7 @@ import SectionTwo from './componenets/SectionTwo';
 import SectionThree from './componenets/SectionThree';
 import SectionFour from './componenets/SectionFour';
 import SectionFive from './componenets/SectionFive';
+import Contact from './Contact';
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
             <SectionThree />
             <SectionFour/>
             <SectionFive/>
+            <Contact/>
         </div>
     );
 };
