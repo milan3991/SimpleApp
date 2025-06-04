@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .rightside h1 {
@@ -93,4 +93,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.remove_button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto;
 }

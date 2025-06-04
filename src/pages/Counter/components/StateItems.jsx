@@ -1,7 +1,7 @@
 import GlobalButton from '../../../components/GlobalButton/GlobalButton';
 import '../style.counter.css'
 
-const StateItem = ({ image, price, heading, handleButton, subheading }) => {
+const StateItem = ({ image, price, heading, handleButton, subheading, isInCart }) => {
     return (
         <div className='items_part'>
             <img src={image} className='items_image' />
@@ -13,9 +13,13 @@ const StateItem = ({ image, price, heading, handleButton, subheading }) => {
                 </div>
                 <h5>{subheading}</h5>
             </div>
-            <GlobalButton text="Add" handleClick={handleButton} className='addtocart_button' />
+            {isInCart ? (
+                <button onClick={handleButton} className='remove_button'>X</button>
+            ) : (
+                <GlobalButton text="Add" handleClick={handleButton} className='addtocart_button' />
+            )}
         </div>
-    )
+    );
 };
 
 export default StateItem;
