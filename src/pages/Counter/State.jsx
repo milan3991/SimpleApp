@@ -5,10 +5,10 @@ import image4 from '../../assets/laptop4.svg';
 import crying from '../../assets/crying.svg';
 
 
-import CounterItem from "./components/CounterItems";
+import StateItem from "./components/StateItems";
 import './style.counter.css'
 
-const Counter = () => {
+const State = () => {
     let items = [
         {
             id: 1,
@@ -55,7 +55,7 @@ const Counter = () => {
                 <h1>List Items</h1>
                 <div className="list_items">
                     {items.map((items) => (
-                        <CounterItem
+                        <StateItem
                             key={items.id}
                             heading={items.heading}
                             subheading={items.subheading}
@@ -85,4 +85,4 @@ const Counter = () => {
 
 }
 
-export default Counter;
+export default State;

@@ -1,7 +1,7 @@
 import GlobalButton from '../../../components/GlobalButton/GlobalButton';
 import '../style.counter.css'
 
-const CounterItem = ({ image, price, heading,handleButton, subheading }) => {
+const StateItem = ({ image, price, heading,handleButton, subheading }) => {
     return (
         <div className='items_part'>
             <img src={image} className='items_image' />
@@ -18,4 +18,4 @@ const CounterItem = ({ image, price, heading,handleButton, subheading }) => {
     )
 };
 
-export default CounterItem;
+export default StateItem;

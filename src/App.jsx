@@ -3,7 +3,7 @@ import './App.css'
 import Navigation from "./components/Navigation/Navigation"
 import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home/Home"
-import Counter from "./pages/Counter/Counter"
+import State from "./pages/Counter/State"
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/state" element={<Counter />} />
+        <Route path="/state" element={<State />} />
       </Routes>
       <Footer />
     </Router>

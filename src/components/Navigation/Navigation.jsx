@@ -25,7 +25,7 @@ const Navigation = () => {
                 </button>
                 <nav className={`navigation_list ${menuOpen ? 'open' : ''}`}>
                     <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                    <Link to="/state" onClick={() => setMenuOpen(false)}>Counter</Link>
+                    <Link to="/state" onClick={() => setMenuOpen(false)}>State</Link>
                     <Link to="/learning" onClick={() => setMenuOpen(false)}>Learning</Link>
                 </nav>
             </div>
