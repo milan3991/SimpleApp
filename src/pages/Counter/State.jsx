@@ -73,7 +73,7 @@ const State = () => {
                 <div className="rightside">
                     <h1>Cart Items</h1>
                     <div className='cart_items'>
-                        {cartItems.length === 0 ? (
+                        {!cartItems.length ? (
                             <div className='noitems'>
                                 <h4>No items in cart</h4>
                                 <img src={crying} className='crying_image' />
