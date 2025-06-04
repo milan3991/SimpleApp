@@ -9,7 +9,7 @@ import StateItem from "./components/StateItems";
 import './style.counter.css';
 
 const State = () => {
-    const [items, setItems] = useState([
+    const items = [
         {
             id: 1,
             image: image1,
@@ -38,7 +38,7 @@ const State = () => {
             price: '220$',
             subheading: 'Brand new laptop'
         },
-    ]);
+    ];
 
     const [cartItems, setCartItems] = useState([]);
 
