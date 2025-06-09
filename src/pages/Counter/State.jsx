@@ -47,7 +47,7 @@ const State = () => {
     };
 
     const handleRemoveFromCart = (item) => {
-        setCartItems(cartItems.filter(i => i.id !== item.id));
+        setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
     };
 
     return (
@@ -81,7 +81,7 @@ const State = () => {
                         ) : (
                             cartItems.map(item => (
                                 <StateItem
-                                    key={item.id}
+                                    key={Math.random()}
                                     heading={item.heading}
                                     image={item.image}
                                     price={item.price}

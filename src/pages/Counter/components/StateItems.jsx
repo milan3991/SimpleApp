@@ -14,7 +14,7 @@ const StateItem = ({ image, price, heading, handleButton, subheading, isInCart }
                 <h5>{subheading}</h5>
             </div>
             {isInCart ? (
-                <button onClick={handleButton} className='remove_button'>X</button>
+                <GlobalButton text="X" handleClick={handleButton} className='remove_button'/>
             ) : (
                 <GlobalButton text="Add" handleClick={handleButton} className='addtocart_button' />
             )}
