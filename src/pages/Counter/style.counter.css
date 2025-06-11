@@ -44,7 +44,7 @@
 .items_part {
     display: flex;
     width: 100%;
-    max-width: 350px;
+    max-width: 550px;
     align-items: center;
     gap: 50px;
     justify-content: center;
@@ -73,6 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .nameprice h4 {
@@ -102,4 +103,9 @@
     font-size: 1.5rem;
     cursor: pointer;
     margin-left: auto;
+}
+
+.quantity {
+    display: flex;
+    margin: 15px;
 }
