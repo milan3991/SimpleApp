@@ -89,7 +89,7 @@
     position: absolute;
     top: 60px;
     right: 1rem;
-    background-color: #8B0000;
+    background-color: rgb(252, 249, 249);
     padding: 1rem;
     border-radius: 8px;
     z-index: 100;

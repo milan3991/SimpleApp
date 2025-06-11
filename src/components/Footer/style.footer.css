@@ -73,3 +73,15 @@
     padding: 0;
     color: inherit;
 } 
+
+@media screen and (max-width: 700px) {
+    .footer_sub  {
+        width: 95%;
+    }
+  .footer_center {
+    display: none;
+  }
+  .footer_main {
+    margin-top: 150px;
+  }
+}
