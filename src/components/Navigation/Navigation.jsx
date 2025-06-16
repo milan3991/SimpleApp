@@ -27,6 +27,7 @@ const Navigation = () => {
                     <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
                     <Link to="/state" onClick={() => setMenuOpen(false)}>State</Link>
                     <Link to="/learning" onClick={() => setMenuOpen(false)}>Learning</Link>
+                    <Link to="/users" onClick={() => setMenuOpen(false)}>Users</Link>
                 </nav>
             </div>
         </div>

@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation/Navigation"
 import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home/Home"
 import State from "./pages/Counter/State"
+import Users from "./pages/Users/Users"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/state" element={<State />} />
+        <Route path="/users" element={<Users />} />
       </Routes>
       <Footer />
     </Router>
