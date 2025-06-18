@@ -3,13 +3,11 @@ import image1 from '../../assets/laptop1.svg';
 import image2 from '../../assets/laptop2.svg';
 import image3 from '../../assets/laptop3.svg';
 import image4 from '../../assets/laptop4.svg';
-import crying from '../../assets/crying.svg';
 
-import StateItem from "./components/StateItems";
 import './style.counter.css';
-import CartItems from './components/CartItems';
+import StateItem from './components/StateItems';
 
-const State = () => {
+const State = ({ handleAddCart }) => {
     const items = [
         {
             id: 1,
@@ -41,100 +39,31 @@ const State = () => {
         },
     ];
 
-    const [cartItems, setCartItems] = useState([]);
-
-    const handleAddToCart = (item) => {
-        const existingItem = cartItems.find((c) => c.id === item.id);
-        if (existingItem) {
-            setCartItems(
-                cartItems.map((i) => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-                )
-            );
-        } else {
-            setCartItems((prev) => [...prev, {...item,quantity:1}]);
-        }
-    };
-
-
-    const handleRemoveFromCart = (item) => {
-        setCartItems(cartItems.filter((cartItem) => cartItem.id !== item.id));
-    };
-
-     const handleIncreaseQuantity = (item) => {
-        setCartItems(
-            cartItems.map((i) =>
-                i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-            )
-        );
-    };
-
-    const handleDecreaseQuantity = (item) => {
-        setCartItems(
-            cartItems.map((i) =>
-                i.id === item.id
-                    ? { ...i, quantity: i.quantity - 1 }
-                    : i
-            ).filter(i => i.quantity > 0)
-        );
-    };
-
-    //Total price cart items
-    const totalPrice = cartItems.reduce((total, item) => total + item.price*item.quantity, 0)
-
-
     return (
-        <div className="counter_wrapper">
-            <div className='content'>
-                <div className='leftside'>
-                    <h1>List Items</h1>
-                    <div className="list_items">
-                        {items.map(item => (
+        <div className="state-wrapper">
+            <div className="state-content">
+                <div className="state-list-items">
+                    <h3 className='items-header'>List items</h3>
+
+                    {items.map((item) => {
+                        return (
                             <StateItem
                                 key={item.id}
+                                id={item.id}
+                                image={item.image}
                                 heading={item.heading}
                                 subheading={item.subheading}
-                                image={item.image}
                                 price={item.price}
-                                handleButton={() => handleAddToCart(item)}
-                                isInCart={false}
+                                handleButton={() => handleAddCart(item)}
                             />
-                        ))}
-                    </div>
+                        )
+                    })}
+
                 </div>
-                <div className='ceneterline'></div>
-                <div className="rightside">
-                    <h1>Cart Items</h1>
-                    <div className='cart_items'>
-                        {!cartItems.length ? (
-                            <div className='noitems'>
-                                <h4>No items in cart</h4>
-                                <img src={crying} className='crying_image' />
-                            </div>
-                        ) : (
-                            cartItems.map(item => (
-                                <CartItems
-                                    key={Math.random()}
-                                    heading={item.heading}
-                                    image={item.image}
-                                    price={item.price * item.quantity}
-                                    handleButton={() => handleRemoveFromCart(item)}
-                                    isInCart={true}
-                                    increase={() => handleIncreaseQuantity(item)} 
-                                    decrease={() => handleDecreaseQuantity(item)} 
-                                    quantity={item.quantity}
-                                />
-                            ))
-                        )}
-                    </div>
-                    {cartItems.length > 0 && (
-                        <div className="total-price">
-                            <h2>Total: $ {totalPrice.toFixed(2)}</h2>
-                        </div>
-                    )}
-                </div>
+
             </div>
         </div>
-    );
+    )
 };
 
 export default State;
